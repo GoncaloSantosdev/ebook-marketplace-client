@@ -72,3 +72,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.container {
+  max-width: 1024px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem !important; /* Consistent padding */
+  padding-right: 1.5rem !important; /* Consistent padding */
+}

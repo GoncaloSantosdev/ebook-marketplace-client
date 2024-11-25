@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <header className="border-b bg-background shadow-sm">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto py-4">
         <div className="flex flex-col">
           {/* Top Bar */}
           <div className="flex items-center justify-between">
@@ -20,7 +20,7 @@ const Header = () => {
             <div className="flex items-center gap-2 sm:gap-4">
               <div className="text-xl sm:text-2xl font-bold whitespace-nowrap">
                 <span className="text-primary">eBook</span>
-                <span className="text-foreground">Marketplace</span>
+                <span className="text-foreground"> Marketplace</span>
               </div>
 
               <div className="relative hidden md:block w-[250px] lg:w-[400px]">
