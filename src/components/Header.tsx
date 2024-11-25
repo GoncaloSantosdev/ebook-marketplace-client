@@ -102,7 +102,7 @@ const Header = () => {
 
               <Button
                 variant="ghost"
-                className="w-full justify-start hover:bg-accent"
+                className="w-full justify-center border border-input hover:bg-accent"
               >
                 Sign In
               </Button>

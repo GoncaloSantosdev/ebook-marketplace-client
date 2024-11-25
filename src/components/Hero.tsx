@@ -3,43 +3,22 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 // Framer Motion
 import { motion, AnimatePresence } from "framer-motion";
+// Data
+import { featuredBooks } from "@/data/books";
 // Icons
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-// Mock data - you can move this to a separate file later
-const heroBooks = [
-  {
-    id: 1,
-    title: "The Art of Programming",
-    author: "John Smith",
-    description:
-      "A comprehensive guide to modern programming practices and principles.",
-    image:
-      "https://ebook-public-data.s3.amazonaws.com/669e469bf094674648c4cac9-to-kill-a-mockingbird.png",
-    price: 29.99,
-  },
-  {
-    id: 2,
-    title: "Digital Marketing Essentials",
-    author: "Sarah Johnson",
-    description:
-      "Master the fundamentals of digital marketing in the modern age.",
-    image:
-      "https://ebook-public-data.s3.amazonaws.com/669e469bf094674648c4cace-master-mern-stack-by-fsniraj.png",
-    price: 24.99,
-  },
-  // Add more books as needed
-];
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroBooks.length);
+    setCurrentSlide((prev) => (prev + 1) % featuredBooks.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroBooks.length) % heroBooks.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + featuredBooks.length) % featuredBooks.length
+    );
   };
 
   return (
@@ -92,16 +71,16 @@ const Hero = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-foreground">
-                    {heroBooks[currentSlide].title}
+                    {featuredBooks[currentSlide].title}
                   </h1>
                   <p className="text-base md:text-lg lg:text-xl mb-2 text-foreground">
-                    By {heroBooks[currentSlide].author}
+                    By {featuredBooks[currentSlide].author}
                   </p>
                   <p className="text-sm md:text-base text-muted-foreground mb-4">
-                    {heroBooks[currentSlide].description}
+                    {featuredBooks[currentSlide].description}
                   </p>
                   <p className="text-lg md:text-xl lg:text-2xl font-bold text-primary mb-6">
-                    ${heroBooks[currentSlide].price}
+                    ${featuredBooks[currentSlide].price}
                   </p>
                   <Button className="w-full md:w-auto bg-primary hover:bg-primary/90 text-primary-foreground">
                     Learn More
@@ -150,8 +129,8 @@ const Hero = () => {
                       className="relative"
                     >
                       <motion.img
-                        src={heroBooks[currentSlide].image}
-                        alt={heroBooks[currentSlide].title}
+                        src={featuredBooks[currentSlide].image}
+                        alt={featuredBooks[currentSlide].title}
                         className="h-[300px] md:h-[400px] object-contain rounded-lg relative z-10"
                         initial={{ opacity: 0, scale: 0.9, rotate: 0 }}
                         animate={{ opacity: 1, scale: 1, rotate: -5 }}
@@ -195,7 +174,7 @@ const Hero = () => {
       {/* Slide Indicators */}
       <div className="container mx-auto relative">
         <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-          {heroBooks.map((_, index) => (
+          {featuredBooks.map((_, index) => (
             <motion.button
               key={index}
               onClick={() => setCurrentSlide(index)}

@@ -1,9 +1,10 @@
-import { Hero } from "../components";
+import { Hero, Trending } from "../components";
 
 const LandingPage = () => {
   return (
     <>
       <Hero />
+      <Trending />
     </>
   );
 };
