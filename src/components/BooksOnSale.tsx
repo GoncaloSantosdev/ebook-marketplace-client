@@ -1,48 +1,37 @@
-import { useState } from "react";
-import { books, categories } from "../data/books";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { FaStar } from "react-icons/fa";
+// Data
+import { books } from "../data/books";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+// Components
 import Button from "./ui/Button";
+// Icons
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
-const BooksListByCategory = () => {
-  const [activeCategory, setActiveCategory] = useState(categories[0]);
-
-  const filteredBooks = books.filter(
-    (book) => book.category === activeCategory
+const BooksOnSale = () => {
+  // Filter books that have a discount greater than 0
+  const discountedBooks = books.filter(
+    (book) => book.discount && book.discount > 0
   );
 
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Categories Tabs */}
-        <div className="flex gap-x-4 overflow-x-auto">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-6 py-3 rounded-full whitespace-nowrap ${
-                activeCategory === category
-                  ? "bg-secondary text-white"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        {/* Category Header with Navigation */}
-        <div className="flex justify-between items-center mt-8">
-          <h2 className="text-2xl font-bold text-gray-800">
-            {activeCategory} eBooks
-          </h2>
+        {/* Updated Header with larger text */}
+        <div className="flex justify-between items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+              Books on Sale
+            </h2>
+            <p className="text-gray-600 mt-2">
+              Discover our collection of discounted eBooks. Limited time offers
+              on selected titles.
+            </p>
+          </div>
           <div className="flex gap-4">
             <button className="swiper-button-prev-custom p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
               <FaChevronLeft className="w-5 h-5 text-gray-600" />
@@ -53,7 +42,7 @@ const BooksListByCategory = () => {
           </div>
         </div>
 
-        {/* Books Slider */}
+        {/* Update Swiper to use discountedBooks */}
         <Swiper
           modules={[Navigation]}
           spaceBetween={24}
@@ -63,7 +52,7 @@ const BooksListByCategory = () => {
             nextEl: ".swiper-button-next-custom",
           }}
         >
-          {filteredBooks.map((book) => (
+          {discountedBooks.map((book) => (
             <SwiperSlide key={book.id} className="!w-[280px] mt-8">
               <div className="h-[520px] flex flex-col">
                 {/* Book Image Container */}
@@ -138,4 +127,4 @@ const BooksListByCategory = () => {
   );
 };
 
-export default BooksListByCategory;
+export default BooksOnSale;

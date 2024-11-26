@@ -11,7 +11,7 @@ export interface Book {
 }
 
 export const books: Book[] = [
-  // Programming Books
+  // Programming Books (3)
   {
     id: "1",
     title: "Clean Code: A Handbook of Agile Software",
@@ -34,7 +34,7 @@ export const books: Book[] = [
     image:
       "https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/994d4fa6f936ff999ebe7ddb54d3a78e-450x600.jpg",
     category: "Programming",
-    discount: 15,
+    discount: 20,
   },
   {
     id: "3",
@@ -46,34 +46,10 @@ export const books: Book[] = [
     image:
       "https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/994d4fa6f936ff999ebe7ddb54d3a78e-450x600.jpg",
     category: "Programming",
-    discount: 15,
-  },
-  {
-    id: "4",
-    title: "Python Crash Course",
-    author: "Eric Matthes",
-    price: 34.99,
-    rating: 4.9,
-    reviews: 4521,
-    image:
-      "https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/994d4fa6f936ff999ebe7ddb54d3a78e-450x600.jpg",
-    category: "Programming",
-    discount: 15,
-  },
-  {
-    id: "5",
-    title: "Learning React",
-    author: "Ethan Brown",
-    price: 42.99,
-    rating: 4.7,
-    reviews: 1253,
-    image:
-      "https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/994d4fa6f936ff999ebe7ddb54d3a78e-450x600.jpg",
-    category: "Programming",
-    discount: 15,
+    discount: 25,
   },
 
-  // Business Books
+  // Business Books (2)
   {
     id: "6",
     title: "Good to Great",
@@ -84,7 +60,7 @@ export const books: Book[] = [
     image:
       "https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/b01e854ce12519d3d7bac72bd7bf8e0f-450x600.jpg",
     category: "Business",
-    discount: 10,
+    discount: 30,
   },
   {
     id: "7",
@@ -98,44 +74,8 @@ export const books: Book[] = [
     category: "Business",
     discount: 10,
   },
-  {
-    id: "8",
-    title: "The Lean Startup",
-    author: "Eric Ries",
-    price: 29.99,
-    rating: 4.6,
-    reviews: 4127,
-    image:
-      "https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/b01e854ce12519d3d7bac72bd7bf8e0f-450x600.jpg",
-    category: "Business",
-    discount: 10,
-  },
-  {
-    id: "9",
-    title: "Rich Dad Poor Dad",
-    author: "Robert Kiyosaki",
-    price: 19.99,
-    rating: 4.7,
-    reviews: 8924,
-    image:
-      "https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/994d4fa6f936ff999ebe7ddb54d3a78e-450x600.jpg",
-    category: "Business",
-    discount: 10,
-  },
-  {
-    id: "10",
-    title: "Think and Grow Rich",
-    author: "Napoleon Hill",
-    price: 22.99,
-    rating: 4.9,
-    reviews: 7231,
-    image:
-      "https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/994d4fa6f936ff999ebe7ddb54d3a78e-450x600.jpg",
-    category: "Business",
-    discount: 10,
-  },
 
-  // Science Fiction
+  // Science Fiction (2)
   {
     id: "11",
     title: "Dune",
@@ -157,42 +97,6 @@ export const books: Book[] = [
     reviews: 6234,
     image:
       "https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/b01e854ce12519d3d7bac72bd7bf8e0f-450x600.jpg",
-    category: "Science Fiction",
-    discount: 10,
-  },
-  {
-    id: "13",
-    title: "Neuromancer",
-    author: "William Gibson",
-    price: 26.99,
-    rating: 4.6,
-    reviews: 3125,
-    image:
-      "https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/b01e854ce12519d3d7bac72bd7bf8e0f-450x600.jpg",
-    category: "Science Fiction",
-    discount: 10,
-  },
-  {
-    id: "14",
-    title: "Snow Crash",
-    author: "Neal Stephenson",
-    price: 29.99,
-    rating: 4.8,
-    reviews: 4213,
-    image:
-      "https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/b01e854ce12519d3d7bac72bd7bf8e0f-450x600.jpg",
-    category: "Science Fiction",
-    discount: 10,
-  },
-  {
-    id: "15",
-    title: "The Martian",
-    author: "Andy Weir",
-    price: 31.99,
-    rating: 4.9,
-    reviews: 5321,
-    image:
-      "https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/cfe08fd2dbb10fcea101b0547247280e-450x600.jpg",
     category: "Science Fiction",
     discount: 10,
   },

@@ -1,11 +1,12 @@
 // Components
-import { BooksListByCategory, Hero } from "../components";
+import { Hero, BooksOnSale, Features } from "../components";
 
 const LandingPage = () => {
   return (
     <>
       <Hero />
-      <BooksListByCategory />
+      <BooksOnSale />
+      <Features />
     </>
   );
 };

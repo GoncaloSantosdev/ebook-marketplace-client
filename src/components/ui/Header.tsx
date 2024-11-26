@@ -1,6 +1,6 @@
 import { useState } from "react";
 // Components
-import { Button } from ".";
+import { Button } from "..";
 // Icons
 import { IoBookSharp } from "react-icons/io5";
 import { FiMenu, FiX, FiShoppingCart, FiSearch } from "react-icons/fi";
