@@ -1,11 +1,21 @@
+// React Router
+import { Route, Routes } from "react-router-dom";
+// Pages
+import { LandingPage } from "./pages";
 // Components
-import { Header } from "./components";
+import { Footer, Header } from "./components";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <main>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+        </Routes>
+      </main>
+      <Footer />
+    </>
   );
 };
 

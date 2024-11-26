@@ -13,7 +13,7 @@ const Header = () => {
           {/* Logo with Icon */}
           <div className="flex items-center gap-x-2 text-2xl font-bold">
             <IoBookSharp className="text-2xl text-primary" />
-            <span className="text-secondary text-2xl">BookStore</span>
+            <span className="text-secondary text-xl">eBook Marketplace</span>
           </div>
 
           {/* Desktop Navigation */}
