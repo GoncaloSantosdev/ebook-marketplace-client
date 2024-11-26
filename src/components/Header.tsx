@@ -1,6 +1,9 @@
 import { useState } from "react";
-import { FiMenu, FiX, FiShoppingCart, FiSearch } from "react-icons/fi";
+// Components
+import { Button } from ".";
+// Icons
 import { IoBookSharp } from "react-icons/io5";
+import { FiMenu, FiX, FiShoppingCart, FiSearch } from "react-icons/fi";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +32,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Cart & Buttons */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-y-4">
             <div className="relative">
               <button className="p-2 hover:text-primary transition-colors">
                 <FiShoppingCart size={24} />
@@ -40,12 +43,12 @@ const Header = () => {
                 )}
               </button>
             </div>
-            <button className="px-4 py-2 text-secondary hover:text-primary transition-colors">
-              Login
-            </button>
-            <button className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-opacity-90 transition-colors">
-              Sign Up
-            </button>
+            <div className="space-x-4 ml-8">
+              <Button variant="ghost" size="sm">
+                Login
+              </Button>
+              <Button size="sm">Sign Up</Button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,12 +85,10 @@ const Header = () => {
               )}
             </div>
             <div className="space-y-2">
-              <button className="w-full px-4 py-2 text-secondary hover:text-primary transition-colors border-2 border-secondary rounded-lg">
+              <Button variant="ghost" fullWidth>
                 Login
-              </button>
-              <button className="w-full px-4 py-2 bg-primary text-white rounded-lg hover:bg-opacity-90 transition-colors">
-                Sign Up
-              </button>
+              </Button>
+              <Button fullWidth>Sign Up</Button>
             </div>
           </div>
         </div>

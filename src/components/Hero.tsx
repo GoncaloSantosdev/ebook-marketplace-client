@@ -1,3 +1,5 @@
+import { Button } from ".";
+
 const Hero = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center py-20 md:py-0">
@@ -7,9 +9,9 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-secondary/75"></div>
       </div>
 
-      {/* Content container */}
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="w-full max-w-7xl mx-auto px-4">
+      {/* Updated container structure to match Header */}
+      <div className="relative z-10 w-full">
+        <div className="max-w-7xl mx-auto px-4">
           {/* Main content  */}
           <div className="text-left space-y-6 md:space-y-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-lg">
@@ -50,12 +52,22 @@ const Hero = () => {
 
             {/* CTA Buttons  */}
             <div className="flex flex-row gap-4 justify-start mt-8">
-              <button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all shadow-lg hover:shadow-xl">
+              <Button size="md" className="md:hidden">
                 Browse Library
-              </button>
-              <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all shadow-lg hover:shadow-xl">
+              </Button>
+              <Button size="lg" className="hidden md:inline-flex">
+                Browse Library
+              </Button>
+              <Button variant="secondary" size="md" className="md:hidden">
                 Learn More
-              </button>
+              </Button>
+              <Button
+                variant="secondary"
+                size="lg"
+                className="hidden md:inline-flex"
+              >
+                Learn More
+              </Button>
             </div>
 
             {/* Trust Indicators  */}
