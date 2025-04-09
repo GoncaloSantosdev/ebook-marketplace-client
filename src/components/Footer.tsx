@@ -1,11 +1,13 @@
+// React Router
 import { Link } from "react-router-dom";
+// Data
 import { footerLinks, socialLinks } from "../data/footerData";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-auto border-t border-primary-light">
+    <footer className="border-t border-primary-light">
       <div className="container mx-auto px-4 py-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
           {/* Logo and Copyright */}
